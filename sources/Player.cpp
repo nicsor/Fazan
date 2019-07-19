@@ -16,12 +16,12 @@ namespace game
     }
   }
 
-  Player::Player (uint16_t id, const std::string &name) :
+  Player::Player (Player_Id id, const std::string &name) :
       id (id), name (name), score (5)
   {
   }
 
-  uint16_t Player::get_id () const
+  Player_Id Player::get_id () const
   {
     return id;
   }

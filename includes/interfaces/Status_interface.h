@@ -20,10 +20,11 @@ namespace game
       {
       }
 
+      virtual void error_detected (const std::string &error) = 0;
       virtual void start_advertising () = 0;
       virtual void stop_advertising () = 0;
       virtual void state_update (const Game_interface &joc) = 0;
-      virtual void request_turn (const Player &jucator) = 0;
+      virtual void request_turn (Player_ptr player, const std::string &wordStart) = 0;
       virtual void request_vote_on_challenge (const std::string &word) = 0;
     };
 

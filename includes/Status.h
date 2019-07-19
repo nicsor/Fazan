@@ -12,10 +12,11 @@ namespace game
     Status ();
     virtual ~Status ();
 
+    void error_detected (const std::string &error);
     void start_advertising ();
     void stop_advertising ();
     void state_update (const game::interfaces::Game_interface &game);
-    void request_turn (const Player &player);
+    void request_turn (Player_ptr player, const std::string &wordStart);
     void request_vote_on_challenge (const std::string &word);
   };
 
